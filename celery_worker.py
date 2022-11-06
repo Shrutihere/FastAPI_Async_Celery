@@ -3,7 +3,8 @@ from celery import Celery
 from celery.utils.log import get_task_logger
 
 # Initialize celery
-celery = Celery('tasks', broker='amqp://guest:guest@127.0.0.1:5672//')
+celery = Celery('tasks', broker='amqp://guest:guest@127.0.0.1:5672//')              # run locally
+# celery = Celery('tasks', broker='pyamqp://guest@rabbitmq//')                        # run through docker
 
 # Create logger - enable to display messages on task logger
 celery_log = get_task_logger(__name__)
