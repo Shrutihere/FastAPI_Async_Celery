@@ -8,4 +8,5 @@ class Settings:
 
     PWD = os.getcwd()
 
+
 settings = Settings()

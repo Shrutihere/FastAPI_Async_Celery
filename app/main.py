@@ -1,9 +1,9 @@
 from fastapi import FastAPI
-from celery_worker import create_order
-from model import Order
+from app.celery_worker import create_order
+from app.model import Order
 import sys
 import uvicorn
-from config import settings
+from app.config import settings
 
 # Create FastAPI app
 app = FastAPI()
